@@ -4,10 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2doParcial_Fierro_POO
+namespace BLL
 {
-    public abstract  class Empleado:IComparable
+   public class Empleado
     {
+
+        public List<CapatazBLL> ListaCapataz = new List<CapatazBLL>();
+
+
+
+
         private int _legajo;
 
         public int legajo
@@ -40,13 +46,6 @@ namespace _2doParcial_Fierro_POO
             set { _edad = value; }
         }
 
-        private string _puesto;
-
-        public string puesto
-        {
-            get { return _puesto; }
-            set { _puesto = value; }
-        }
 
         private double _sueldo;
 
@@ -59,17 +58,22 @@ namespace _2doParcial_Fierro_POO
 
 
 
-
-        public Empleado(int legajo, string nombre, string apellido, int edad, string puesto)
+        public Empleado(int legajo, string nombre, string apellido, int edad)
         {
-            
+
             this._legajo = legajo;
             this._nombre = nombre;
             this.apellido = apellido;
             this._edad = edad;
-            this._puesto = puesto;
+
+
+
+
         }
 
+        public Empleado()
+        {
+        }
 
         public int CompareTo(object obj)
         {
@@ -95,3 +99,4 @@ namespace _2doParcial_Fierro_POO
 
     }
 }
+

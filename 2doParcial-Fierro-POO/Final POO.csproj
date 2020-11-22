@@ -47,23 +47,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arquitecto.cs" />
-    <Compile Include="Capataz.cs" />
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Empresa.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ICalculable.cs" />
-    <Compile Include="Peon.cs" />
+    <Compile Include="FormAltaArquitecto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaArquitecto.Designer.cs">
+      <DependentUpon>FormAltaArquitecto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAltaCapataz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaCapataz.Designer.cs">
+      <DependentUpon>FormAltaCapataz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAltaPeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAltaPeon.Designer.cs">
+      <DependentUpon>FormAltaPeon.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Proyectos.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaArquitecto.resx">
+      <DependentUpon>FormAltaArquitecto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaCapataz.resx">
+      <DependentUpon>FormAltaCapataz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAltaPeon.resx">
+      <DependentUpon>FormAltaPeon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -86,6 +106,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{53a791f7-5bed-4d48-91c2-63fb879e1556}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{e891842d-bb00-4b7f-8b10-79a1e94f70c1}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

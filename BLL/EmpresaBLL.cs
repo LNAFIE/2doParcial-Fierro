@@ -4,26 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2doParcial_Fierro_POO
+namespace BLL
 {
-    public class Empresa
+   public class EmpresaBLL
     {
+
         public List<Empleado> listaemp = new List<Empleado> { };
 
         public List<Empleado> getListaEmp()
         {
             //devolver lista Empleados
-            return this.listaemp;           
-
+            return this.listaemp;
         }
 
 
         public void AgregarEmpLista(Empleado emp)
         {
             this.listaemp.Add(emp);
-            
-
-
         }
 
 
@@ -41,10 +38,6 @@ namespace _2doParcial_Fierro_POO
             return RecauTotal;
         }
 
-
-    
-
-
         public string CategoriaConMasEmpleados()
         {
             //CONTADORES
@@ -55,11 +48,11 @@ namespace _2doParcial_Fierro_POO
             //Bucle que recorra la lista de empleados 
             foreach (var item in listaemp)
             {
-                if (item is Peon)
+                if (item is PeonBLL)
                 {
                     totalPeon++;
                 }
-                else if (item is Capataz)
+                else if (item is CapatazBLL)
                 {
                     totalCapataz++;
                 }

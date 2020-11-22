@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2doParcial_Fierro_POO
+namespace BLL
 {
-    interface ICalculable
+    public class Class1
     {
 
-        double CalcularSueldo();
 
 
 
